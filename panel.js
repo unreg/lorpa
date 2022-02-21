@@ -11,7 +11,6 @@ const goToLastComment = () => {
       visited_articles.add(article.id);
 
       browser.storage.local.get(['visited_details'], (stored) => {
-        console.log(stored);
         var { visited_details } = stored;
 
         if (!visited_details) {
