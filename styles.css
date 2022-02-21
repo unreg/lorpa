@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div.lor-panel-container {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  border-radius: 20px;
+  opacity: 0.32;
+}
+div.lor-panel-container:hover {
+  opacity: 1.00;
+}
+
+
+ul.lor-panel-group  {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+ul.lor-panel-group li {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+}
+ul.lor-panel-group li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #272c2d;
+  line-height: 42px;
+  text-align: center;
+  margin: 7px 0;
+  border-radius: 20px;
+  box-shadow: -2px -2px 3px rgba(255, 255, 255, 0.05),
+               3px  3px 3px rgba(0, 0, 0, 0.2)
+}
+ul.lor-panel-group li a .fa {
+  font-size: 18px;
+  color: #555;
+}
+ul.lor-panel-group li a:hover .fa {
+  color: #eca53d;
+  text-shadow: 0 0 15px #eca53d;
+}
+
