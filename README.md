@@ -7,7 +7,7 @@ LOR panel - simple web-extension for navigate on [linux.org.ru](https://linux.or
 
 ### Firefox install
 
-From signed XPI [lor_panel-0.3-an+fx.xpi](https://github.com/unreg/lorpa/releases/download/release/lor_panel-0.3-an+fx.xpi)
+From signed XPI [lor_panel-0.3-an+fx.xpi](https://github.com/unreg/lorpa/releases/download/0.3/lor_panel-0.3-an+fx.xpi)
 
 Temporary install from source:
 * get source code
