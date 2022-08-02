@@ -11,6 +11,7 @@ const goToLastComment = () => {
       visited_articles.add(article.id);
 
       browser.storage.local.get(['visited_details'], (stored) => {
+        console.log(stored);
         var { visited_details } = stored;
 
         if (!visited_details) {
@@ -94,7 +95,17 @@ container.appendChild(group);
 
 buttons.forEach(item => {
   const li = document.createElement('li');
-  li.innerHTML = `<a><i class="fa fa-${item.icon}" aria-hidden="true"></i></a>`
+  const li_context = `<a><i class="fa fa-${item.icon}" aria-hidden="true"></i></a>`;
+
+  const parser = new DOMParser();
+  const parsed = parser.parseFromString(li_context, 'text/html');
+  const tags = parsed.getElementsByTagName('a');
+
+  li.innerHTML = '';
+  for (const tag of tags) {
+    li.appendChild(tag)
+  }
+
   li.onclick = item.callback;
   group.appendChild(li);
 })
